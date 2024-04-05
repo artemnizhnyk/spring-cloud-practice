@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: "http://localhost:8081/eureka"
+
+logging:
+  level:
+    com.netflix.eureka: off
+    com.netflix.discovery: off
+  pattern:
+    console: "[ %-5level] %d{HH:mm:ss} %msg - %C{1.}%n"
